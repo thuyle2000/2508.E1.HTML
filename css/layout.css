@@ -1,0 +1,44 @@
+nav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 1s;
+}
+
+ul.menu {
+    list-style-type: none;
+}
+
+a:hover {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
