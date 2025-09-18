@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            font-size: 0.9rem;
+        }
+        table{
+            width: 60%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        tbody tr>td:nth-last-child(1) {
+            text-align: right;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 10px;
+            color: orangered;
+        }
+
+        thead {
+            background-color: lightgray;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: yellow;
+        }
+
+        tbody .white {
+            background-color: white;
+        }
+
+        tfoot {
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Table HTML Demo</h2>
+    <hr>
+    <table>
+        <caption>Student List</caption>
+        <thead>
+            <tr>
+                <th>Group No.</th>
+                <th>ID</th>
+                <th>Full name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Mark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3" class="white">Group 1</td>
+                <td>S01</td>
+                <td style="vertical-align: top;">Le Chieu Thong</td>
+                <td>thong@badboy.com <br />
+                    thiet@gmail.com <br />
+                    lam@gmail.com
+                </td>
+                <td>male</td>
+                <td class="right">40</td>
+            </tr>
+            <tr>
+                <td>S02</td>
+                <td>Le Hoang Chau</td>
+                <td>chau@goodgirl.com</td>
+                <td>female</td>
+                <td class="right">85</td>
+            </tr>
+            <tr>
+
+                <td>S03</td>
+                <td>Tang Huynh Tuan Tu</td>
+                <td>tu@gmail.com</td>
+                <td>male</td>
+                <td class="right">60</td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="white">Group 2</td>
+                <td>S04</td>
+                <td>Nguyen Nhat Anh</td>
+                <td>anh@gmail.com</td>
+                <td>male</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>S05</td>
+                <td>Pham Thanh Linh</td>
+                <td>linh@gmail.com</td>
+                <td>male</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>S06</td>
+                <td>Nguyen Vu Ngoc Tuan</td>
+                <td>tuan@yahoo.com</td>
+                <td>male</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>S07</td>
+                <td>Tran Thanh Phuc</td>
+                <td>phuc@yahoo.com</td>
+                <td>male</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                    <i>Note: This is a table of student information</i>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

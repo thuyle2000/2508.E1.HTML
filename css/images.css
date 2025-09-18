@@ -1,0 +1,45 @@
+.den-tt{
+    width: 50vw;
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px 10px 5px 15px;
+    float: right;
+}
+
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+p::first-letter{
+    font-size: 200%;
+    color: red;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+li{
+    margin: 10px 0;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+figure{
+    text-align: center;
+}   
+figcaption{
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 10px;
+}
+figure img{
+    width: 20vw;
+    height: 20vw;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: inset 0px 0px 5px grey;
+    border-radius: 10px;
+}

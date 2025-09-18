@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        div {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            animation: myAnimation 5s infinite alternate-reverse;
+        }
+
+        @keyframes myAnimation {
+            0% {
+                background-color: red;
+                top: 0px;
+                left: 0px;
+            }
+
+            20% {
+                background-color: green;
+                top: 0px;
+                left: 100px;
+            }
+
+            40% {
+                background-color: blue;
+                top: 100px;
+                left: 200px;
+            }
+
+            60% {
+                background-color: orange;
+                top: 200px;
+                left: 300px;
+            }
+            80% {
+                background-color: yellow;
+                top: 30px;
+                left: 400px;
+            }
+            100% {
+
+                background-color: red;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS Animation Demo</h2>
+    <hr>
+    <div></div>
+</body>
+
+</html>

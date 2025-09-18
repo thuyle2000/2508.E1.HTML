@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-position</title>
+</head>
+<body>
+    <h2>CSS Position Demo</h2>
+    <hr>
+    <div style="position: static; border: 1px solid black; margin: 5px; padding: 5px;">
+        This div is positioned statically (default). It follows the normal document flow.
+    </div>
+    <div style="position: relative; border: 1px solid black; margin: 5px; padding: 5px;">
+        This div is positioned relatively. It can be moved using top, right, bottom, and left properties.
+    </div>
+    <div style="position: absolute; border: 1px solid black; margin: 5px; padding: 5px;">
+        This div is positioned absolutely. It is removed from the normal document flow and can be placed anywhere.
+    </div>
+    <div style="position: fixed; border: 1px solid black; margin: 5px; padding: 5px;">
+        This div is positioned fixed. It stays in the same place even when the page is scrolled.
+    </div>  
+    <div style="position: sticky; top: 0; border: 1px solid black; margin: 5px; padding: 5px; background-color: lightgrey;">
+        This div is positioned sticky. It sticks to the top of the viewport when you scroll past it.
+    </div>
+    <div style="position: absolute; top: 100px; left: 50px; margin: 5px; padding: 5px; background-color: black; color: white;">
+        This div is positioned absolute. It sticks to the top of the viewport when you scroll past it.
+    </div>
+</body>
+</html>

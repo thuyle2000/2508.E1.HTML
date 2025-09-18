@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day1-format</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px 50px;
+            padding: 40px;
+            border: 2px solid black;
+            box-shadow: 5px 5px 5px pink;
+            background-color: lavenderblush;
+        }
+        ol{
+            list-style-type: lower-greek;
+        }
+        p{
+            font-weight: bold;
+            color: orangered;
+            font-size: 16px;}
+
+        #toc{
+            border: 3px solid blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="p0">Day01 - formatting</h2>
+    <hr/>
+    <div id="toc">
+       <h3>TOC - Demo List</h3>
+       <ul>
+        <li><a href="#p1"> Ordered List </a></li>
+        <li><a href="#p2">Unordered List </a></li>
+        <li><a href="#p3">Definition List </a></li>
+       </ul>
+
+    </div>
+
+    <p id="p1"> Ba ngon ngu lap trinh pho bien nhat</p>
+    <ol>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C#</li>
+    </ol>
+
+    <p id="p2"> Ba mau ua thich</p>
+    <ul>
+        <li>do</li>
+        <li>xanh
+            <ul style="list-style-type: square;">
+                <li>duong</li>
+                <li>da troi</li>
+                <li>lam</li>
+            </ul>
+        </li>
+        <li>vang</li>
+    </ul>
+
+    <p id="p3">Menu</p>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Black coffee</dd>
+        <dd>White coffee</dd>
+
+        <dt>Tea</dt>
+        <dd>Green tea</dd>
+        <dd>Milk tea</dd>
+
+        <dt>Juice</dt>
+        <dd>Orange juice</dd>
+        <dd>Apple juice</dd>
+    </dl>
+
+    <p style="text-align: right;"><a href="#p0">Top</a></p>
+</body>
+</html>

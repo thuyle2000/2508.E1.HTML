@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-demo</title>
+    <link rel="stylesheet" href="css/d02.css">
+    <style>
+        #internal-style {
+            color: green;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div{
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+            color: brown;
+        }
+        .blue-text {
+            color: blue;
+        }
+        #yellow-text {
+            background-color: black;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS - Style sheet Demo</h2>
+    <hr />
+
+    <p style="color:blue; font-size:20px; font-family:Arial;">Inline CSS: This is a blue colored text with Arial font
+        and font size 20px.</p>
+
+    <p class="external-style">External CSS: This text is styled using an external CSS file.</p>
+
+    <p id="internal-style">Internal CSS: This text is styled using internal CSS defined in the head section.</p>
+
+    <p>Non-style</p>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore eligendi commodi, asperiores numquam, possimus iure veritatis voluptatum voluptates labore aliquid vitae fuga perferendis delectus eaque? Itaque aliquam non iste. Veritatis?</div>
+
+    <div style="border-color: bisque; background-color: blanchedalmond;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi itaque deserunt asperiores aperiam quia maiores, reiciendis deleniti quod, necessitatibus quas facilis distinctio corrupti vitae odio enim doloremque modi sapiente. Velit.</div>
+
+    <div  class="blue-text" id="yellow-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ipsa fugit dignissimos sunt optio. Dignissimos modi fugit recusandae, excepturi voluptatem quod mollitia accusantium nobis sit voluptatibus, odit aut. Tempora, aspernatur.</div>
+
+</body>
+
+</html>
