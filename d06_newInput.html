@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new-input</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div>
+        <!-- tieu de dau trang (logo, banner  ...) -->
+        <header></header>
+
+        <!-- menu dieu huong -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href="#">Gioi thieu</a></li>
+                <li><a href="#">San pham</a></li>
+                <li><a href="#">Tin tuc</a></li>
+                <li><a href="#">Lien he</a></li>
+            </ul>
+        </nav>
+
+        <!-- noi dung chinh -->
+        <section>
+            <h3>New Input Elements</h3>
+            <hr>
+            <form action="d03_animation.html" method="get">
+                <div>
+                    <label for="">input your birthday: </label>
+                    <input type="date" name="bday" id="bday" 
+                    value="2000-12-25" required 
+                    min="1990-01-01" max="2024-12-31"
+                    title="Nhap ngay thang nam sinh">
+                </div>
+
+                <div>
+                    <label for="">input your appointment time: </label>
+                    <input type="time" name="atime" id="atime" 
+                    value="13:30" required 
+                    min="09:00" max="18:00"
+                    title="Nhap thoi gian hen gap">
+                </div>
+
+                <div>
+                    <label for="">input your meeting time: </label>
+                    <input type="datetime-local" name="mtime" id="mtime" 
+                    value="2025-09-25T13:30" required 
+                    min="2025-09-23T09:00" max="2025-12-31T18:00"
+                    title="Nhap thoi gian cuoc hop"
+                    autofocus>    
+                </div>
+
+                <div>
+                    <label for="">input your website: </label>
+                    <input type="url" name="web" id="web" 
+                    value="https://www.example.com" required 
+                    pattern="https://.*"
+                    title="Nhap dia chi website bat dau bang https://">
+                </div>
+
+                <div>
+                    <label for="">input your email: </label>
+                    <input type="email" name="email" id="email" 
+                    value="example@example.com" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Nhap dia chi email hop le">
+                </div>
+
+                <div>
+                    <label for="">input your phone number: </label>
+                    <input type="tel" name="phone" id="phone" 
+                    value="0123456789" required 
+                    pattern="[0-9]{10}"
+                    title="Nhap so dien thoai gom 10 chu so">
+                </div>
+
+                <div>
+                    <label for="">input your favorit color: </label>
+                    <input type="color" name="color" id="color" 
+                    value="#ff0000" required
+                    title="Nhap ma mau sac">
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+
+
+
+
+
+            </form>
+
+
+        </section>
+
+        <!-- chan trang -->
+        <footer>
+            <p>Copyright &copy; 2025 by T3.2508.E1</p>
+        </footer>
+    </div>
+</body>
+
+</html>

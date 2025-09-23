@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new-form-element</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div>
+        <!-- tieu de dau trang (logo, banner  ...) -->
+        <header></header>
+
+        <!-- menu dieu huong -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href="#">Gioi thieu</a></li>
+                <li><a href="#">San pham</a></li>
+                <li><a href="#">Tin tuc</a></li>
+                <li><a href="#">Lien he</a></li>
+            </ul>
+        </nav>
+
+        <!-- noi dung chinh -->
+        <section>
+            <div>
+                <h2>New Form Elements : Progress | Meter</h2>
+                <hr>
+                <form action="d03_images.html" method="get">
+
+                    <div>
+                        <label for="">Download progress</label>
+                        <progress value="0" max="100" 
+                        name="download" id="download">70%</progress>
+                    </div>
+
+                    <div>
+                        <label for="">Rank [0-100]:</label>
+                        <meter value="70" min="0" max="100" 
+                        id="rank" name="rank"></meter>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+            </div>
+
+
+        </section>
+        <!-- chan trang -->
+        <footer>
+            <p>Copyright &copy; 2025 by T3.2508.E1</p>
+        </footer>
+    </div>
+</body>
+<script>
+    const progress = document.getElementById('download');
+    // const meter = document.getElementById('rank');
+
+    let value = progress.value;
+    setInterval(() => {
+        value++;
+        if (value > 100) value = 0;
+        progress.value = value;
+        meter.value = value;
+    }, 500);
+
+
+</script>
+</html>

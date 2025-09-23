@@ -27,27 +27,27 @@
         <!-- noi dung chinh -->
         <section>
             <h2>Customer Survey</h2>
-            <form action="d03_table.html" method="get">
+            <form action="d03_table.html" method="post">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required
                 placeholder="nhap ho va ten"
-                value="thong"><br><br>
+                value="le chieu thong"><br><br>
 
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required value="thong@gmail.com"><br><br>
 
                 <label for="age">Age:</label><br>
-                <input type="number" id="age" name="age" min="1" max="120" required value="25"><br><br>
+                <input type="number" id="age" name="age" min="1" max="100" required value="25"><br><br>
 
                 <label for="employed">Are you 
                 employed?</label><br>
                 <input type="radio" id="employed_yes" name="employed" value="yes" required>
-
                 <label for="employed_yes">Yes</label><br>
-                <input type="radio" id="employed_no" name="employed" value="no" required checked>
+
+                <input type="radio" id="employed_no" name="employed" value="no" required  checked>
                 <label for="employed_no">No</label><br><br>
 
-                
+
                 <label for="comments">Additional Comments:</label><br>
                 <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
 

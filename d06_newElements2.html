@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new-form-element</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div>
+        <!-- tieu de dau trang (logo, banner  ...) -->
+        <header></header>
+
+        <!-- menu dieu huong -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href="#">Gioi thieu</a></li>
+                <li><a href="#">San pham</a></li>
+                <li><a href="#">Tin tuc</a></li>
+                <li><a href="#">Lien he</a></li>
+            </ul>
+        </nav>
+
+        <!-- noi dung chinh -->
+        <section>
+            <div>
+                <h2>Demo DataList(new element) | Select</h2>
+                <hr>
+                <form action="d03_images.html" method="get">
+
+                    <div>
+                        <label for="">Student Name (datalist)</label>
+                        <input list="ds" name="studentName" id="studentName">
+                        <datalist id="ds">
+                            <option value="Le Chieu Thong">
+                            <option value="Tang Tuan Tu">
+                            <option value="Hoang Chau Cach Cach">
+                            <option value="Tran Le Minh Anh">
+                            <option value="Nguyen Nhat Anh">
+                            <option value="Nguyen Hoang Hiep">
+                            <option value="Le Phuc">
+                        </datalist>
+                    </div>
+
+                    <div>
+                        <label for="">Student Name (select)</label>
+                        <select name="sName" id="Submit">
+                            <option value="">-- chon ten sinh vien --</option>
+                            <option value="Le Chieu Thong"> Le Chieu Thong</option>
+                            <option value="Tang Tuan Tu">Tang Tuan Tu </option>
+                            <option value="Hoang Chau Cach Cach"> Hoang Chau Cach Cach</option>
+                            <option value="Tran Le Minh Anh">Tran Le Minh Anh </option>
+                            <option value="Nguyen Nhat Anh">Nguyen Nhat Anh </option>
+                            <option value="Nguyen Hoang Hiep">Nguyen Hoang Hiep </option>
+                            <option value="Le Phuc">
+                                Le Phuc
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+            </div>
+
+
+        </section>
+        <!-- chan trang -->
+        <footer>
+            <p>Copyright &copy; 2025 by T3.2508.E1</p>
+        </footer>
+    </div>
+</body>
+<script>
+    const progress = document.getElementById('download');
+    // const meter = document.getElementById('rank');
+
+    let value = progress.value;
+    setInterval(() => {
+        value++;
+        if (value > 100) value = 0;
+        progress.value = value;
+        meter.value = value;
+    }, 500);
+
+
+</script>
+
+</html>

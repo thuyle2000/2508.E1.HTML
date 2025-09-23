@@ -3,7 +3,6 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-
 }
 
 .menu {
@@ -41,4 +40,20 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    top: 50px;
+    /* margin: 80px 20px 60px 20px; */
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div {
+    margin: 10px 0;
 }
