@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/d07_login.js"></script>
+</head>
+
+<body>
+    <div>
+        <!-- tieu de dau trang (logo, banner  ...) -->
+        <header></header>
+
+        <!-- menu dieu huong -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href="#">Gioi thieu</a></li>
+                <li><a href="#">San pham</a></li>
+                <li><a href="#">Tin tuc</a></li>
+                <li><a href="#">Lien he</a></li>
+            </ul>
+        </nav>
+
+        <!-- noi dung chinh -->
+        <section>
+            <h2>Register New Member</h2>
+
+            <form action="d03_images.html" method="get" onsubmit="return validateAccount(event)">
+                <!-- nhap username -->
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="admin" placeholder="Nhap username" required>
+                </div>
+
+                <!-- nhap mat khau -->
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" value="123456" placeholder="Nhap mat khau"
+                        required>
+                </div>
+
+                <!-- nhap mat khau -->
+                <div>
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" id="password" name="password" value="123456"
+                        placeholder="Nhap mat khau xac nhan lan 2" required>
+                </div>
+
+                <!-- nhap email -->
+                <div>
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email" value="admin@gmail.com" placeholder="Nhap email"
+                        required>
+                </div>
+
+                <!-- nhap gioi tinh -->
+                <div>
+                    <label for="gender">gender:</label>
+                    <input type="radio" id="gender_m" name="gender" value="male" placeholder="Chon gioi tinh nam"
+                        checked required> Male
+                    <input type="radio" id="gender_f" name="gender" value="female" placeholder="Chon gioi tinh nu"
+                        required> Female
+                </div>
+
+                <!-- nhap so thich -->
+                <div>
+                    <label for="hobbies">hobbies:</label>
+                    <input type="checkbox" id="h_game" name="h_game" value="game" placeholder="Chon choi game"
+                        checked > game
+                    <input type="checkbox" id="h_travel" name="h_travel" value="travel" placeholder="Chon di du lich"
+                        > travel
+                    <input type="checkbox" id="h_music" name="h_music" value="music" placeholder="Chon nghe nhac"
+                        required > music
+                </div>
+
+                <!-- nhap noi cu ngu -->
+                <div>
+                    <label for="country">country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">-- Select --</option>
+                        <option value="vn" selected>Viet Nam</option>
+                        <option value="us">United States</option>
+                        <option value="fr">France</option>
+                        <option value="jp">Japan</option>
+                    </select>
+                </div>
+
+                <!-- nhap ngay sinh -->
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" value="2000-01-01" required>
+                </div>  
+
+                <!-- nut dang nhap -->
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </form>
+
+
+        </section>
+
+        <!-- chan trang -->
+        <footer>
+            <p>Copyright &copy; 2025 by T3.2508.E1</p>
+        </footer>
+    </div>
+</body>
+
+</html>
