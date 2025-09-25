@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-function</title>
+</head>
+
+<body>
+    <h2>JavaScript event bubbling</h2>
+    <hr>
+    <ul id="menu">
+        <li><a href="" id="alert">alert()</a></li>
+        <li><a href="" id="confirm">confirm()</a></li>
+        <li><a href="" id="prompt">prompt()</a></li>
+        <li><a href="" id="parseInt">parseInt()</a></li>
+        <li><a href="" id="parseFloat">parseFloat()</a></li>
+        <li><a href="" id="eval">eval()</a></li>
+    </ul>
+
+    <p id="output"></p>
+
+</body>
+<script>
+
+    let output = document.getElementById("output");
+    let menu = document.getElementById("menu");
+    menu.onclick = function (ev) {
+        ev.preventDefault();   // prevent the default action of the event
+        let target = ev.target; // get the element that triggered the event
+        console.log(target.id);
+
+        switch(target.id) {
+            case "alert":
+                alert("Hello World");
+                break;
+            case "confirm":
+                let result = confirm("Are you sure ?");
+                if (result) {
+                    output.innerText = "<b>User pressed OK</b>";
+                } else {
+                    output.innerHTML = "<u><i>User pressed Cancel</i></u>";
+                }
+                break;
+            case "prompt":
+                let name = prompt("Enter your name:", "Thong Chieu Le");
+                if (name != null) {
+                    output.innerHTML = "Hello " + name + "! How are you today?";
+                }
+                break;
+            case "parseInt":
+                let a = parseInt("10");
+                let b = parseInt("10.55");
+                let c = parseInt("10 years");
+                let d = parseInt("years 10");
+
+                output.innerHTML = `a: ${a} <br/> b: ${b} <br/> c: ${c} <br/> d: ${d} <br/>`;
+                break;
+            case "parseFloat":
+                let e = parseFloat("10");
+                let f = parseFloat("10.55");
+                let g = parseFloat("10 years");
+                let h = parseFloat("years 10");
+
+                output.innerHTML = `a: ${e} <br/> b: ${f} <br/> c: ${g} <br/> d: ${h} <br/>`;
+                break;
+            case "eval":
+                let x = 10;
+                let y = 20;
+                let z = eval("x * y + 100");
+
+                output.innerHTML = "z: " + z + "<br/>";
+                break;
+            default:
+                output.innerHTML = "";
+        }
+
+
+        
+    };
+
+
+
+
+    
+    // document.getElementById("alert").onclick = function () {
+    //     alert("Hello World");
+    //     return false;
+    // };
+
+    // document.getElementById("confirm").onclick = function () {
+    //     let result = confirm("Are you sure ?");
+    //     if (result) {
+    //         // output.innerHTML = "<b>User pressed OK</b>";
+    //         output.innerText = "<b>User pressed OK</b>";
+    //     } else {
+    //         output.innerHTML = "<u><i>User pressed Cancel</i></u>";
+    //     }
+    //     return false;
+    // };
+
+    // document.getElementById("prompt").onclick = function () {
+    //     let name = prompt("Enter your name:", "Thong Chieu Le");
+    //     if (name != null) {
+    //         output.innerHTML = "Hello " + name + "! How are you today?";
+    //     }
+    //     return false;
+    // };
+
+    // document.getElementById("parseInt").onclick = function () {
+    //     let a = parseInt("10");
+    //     let b = parseInt("10.55");
+    //     let c = parseInt("10 years");
+    //     let d = parseInt("years 10");
+
+    //     output.innerHTML = "a: " + a + "<br/>" +
+    //         "b: " + b + "<br/>" +
+    //         "c: " + c + "<br/>" +
+    //         "d: " + d + "<br/>";
+
+    //     return false;
+    // };
+
+    // document.getElementById("parseFloat").onclick = function () {
+    //     let a = parseFloat("10");
+    //     let b = parseFloat("10.55");
+    //     let c = parseFloat("10 years");
+    //     let d = parseFloat("years 10");
+
+    //     // output.innerHTML = "a: " + a + "<br/>" +
+    //     //     "b: " + b + "<br/>" +
+    //     //     "c: " + c + "<br/>" +
+    //     //     "d: " + d + "<br/>";
+
+    //     output.innerHTML = `a: ${a} <br/> b: ${b} <br/> c: ${c} <br/> d: ${d} <br/>`;
+
+    //     return false;
+    // };
+
+    // document.getElementById("eval").onclick = function () {
+    //     let x = 10;
+    //     let y = 20;
+    //     let z = eval("x * y + 100");
+
+    //     output.innerHTML = "z: " + z + "<br/>";
+    //     return false;
+    // };
+
+</script>
+
+</html>
