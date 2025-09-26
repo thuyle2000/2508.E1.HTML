@@ -29,7 +29,7 @@
         <section>
             <h2>Register New Member</h2>
 
-            <form action="d03_images.html" method="get" onsubmit="return validateAccount(event)">
+            <form action="d03_images.html" method="get" onsubmit="return validateForm(event)">
                 <!-- nhap username -->
                 <div>
                     <label for="username">Username:</label>
@@ -46,10 +46,10 @@
                 <!-- nhap mat khau -->
                 <div>
                     <label for="password">Confirm Password:</label>
-                    <input type="password" id="password" name="password" value="123456"
+                    <input type="password" id="password2" name="password2" value="123456"
                         placeholder="Nhap mat khau xac nhan lan 2" required>
                 </div>
-
+s
                 <!-- nhap email -->
                 <div>
                     <label for="email">email:</label>
@@ -61,9 +61,8 @@
                 <div>
                     <label for="gender">gender:</label>
                     <input type="radio" id="gender_m" name="gender" value="male" placeholder="Chon gioi tinh nam"
-                        checked required> Male
-                    <input type="radio" id="gender_f" name="gender" value="female" placeholder="Chon gioi tinh nu"
-                        required> Female
+                        checked > Male
+                    <input type="radio" id="gender_f" name="gender" value="female" placeholder="Chon gioi tinh nu"> Female
                 </div>
 
                 <!-- nhap so thich -->
@@ -74,7 +73,7 @@
                     <input type="checkbox" id="h_travel" name="h_travel" value="travel" placeholder="Chon di du lich"
                         > travel
                     <input type="checkbox" id="h_music" name="h_music" value="music" placeholder="Chon nghe nhac"
-                        required > music
+                         > music
                 </div>
 
                 <!-- nhap noi cu ngu -->
