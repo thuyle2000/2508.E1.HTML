@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <h2>JS Date Demo</h2>
+    <hr>
+    <div>
+        <label for="dateInput">Nhập ngày sinh:</label>
+        <input type="date" id="dateInput" value="2005-09-15">
+    </div>
+    <div>
+        <p id="dateInfo"></p>
+        <p id="timer"></p>
+    </div>
+    <script>
+        document.getElementById('dateInput').onchange = (ev) => {
+            let dob = new Date(ev.target.value);
+            let yob = dob.getFullYear();
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - yob;
+
+            document.getElementById('dateInfo').innerHTML = `Năm nay bạn: ${age} tuổi`;
+        }
+
+        setInterval(() => {
+            let now = new Date();
+            document.getElementById('timer').innerHTML = now.toLocaleTimeString();
+        }, 1000);
+
+
+    </script>
+</body>
+</html>

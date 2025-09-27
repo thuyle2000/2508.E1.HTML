@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/d08.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <!-- tieu de dau trang (logo, banner  ...) -->
+        <header></header>
+
+        <!-- menu dieu huong -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href="#">Gioi thieu</a></li>
+                <li><a href="#">San pham</a></li>
+                <li><a href="#">Tin tuc</a></li>
+                <li><a href="#">Lien he</a></li>
+            </ul>
+        </nav>
+
+        <!-- noi dung chinh -->
+        <section>
+            <h2>Javascript Function Demo</h2>
+            <hr>
+
+            <div>
+                <label for="n">Nhap n:</label>
+                <input type="number" id="n" name="n" min="1" max="30" value="5"                    >
+                <span id="factorial"></span>
+            </div>
+
+            <div>
+                <h3>Danh sach sinh vien</h3>
+                <div id="DanhSach">
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- chan trang -->
+        <footer>
+            <p>Copyright &copy; 2025 by T3.2508.E1</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = display;
+        document.getElementById('n').onchange = (ev) => {
+            let n = ev.target.value;
+            document.getElementById('factorial').innerText = ` => ${n}! =  ${fn_factorial(n)} `;
+        }
+    </script>
+</body>
+
+</html>
