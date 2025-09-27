@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>browser-object</title>
+    <style>
+        div {
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Browser Object Demo</h2>
+    <hr>
+    <div>
+        <button id="showInfo">Show Browser Info</button>
+        <div id="browserInfo"></div>
+    </div>
+    <hr>
+    <div>
+        <button id="showLocation">Show Location Info</button>
+        <div id="locationInfo"></div>
+
+    </div>
+
+    <div>
+        <h3>Window and Screen Size</h3>
+        <p><strong>Window Size:</strong> <span id="windowSize"></span></p>
+        <p><strong>Screen Size:</strong> <span id="screenSize"></span></p>
+    </div>
+    <script>
+
+        function updateSizes() {
+            document.getElementById('windowSize').innerText = `${window.innerWidth} x ${window.innerHeight}`;
+            document.getElementById('screenSize').innerText = `${screen.width} x ${screen.height}`;
+        }
+
+        window.onload = updateSizes;
+        window.onresize = updateSizes;
+
+
+        document.getElementById('showInfo').onclick = () => {
+            let info = `
+                <p><strong>User Agent:</strong> ${navigator.userAgent}</p>
+                <p><strong>Platform:</strong> ${navigator.platform}</p>
+                <p><strong>Language:</strong> ${navigator.language}</p>
+            `;
+            document.getElementById('browserInfo').innerHTML = info;
+        }
+
+        document.getElementById('showLocation').onclick = () => {
+            let loc = `<p><strong>Current URL:</strong> ${window.location.href}</p>
+                       <p><strong>Protocol:</strong> ${window.location.protocol}</p>
+                       <p><strong>Host:</strong> ${window.location.host}</p>
+                       <p><strong>Pathname:</strong> ${window.location.pathname}</p>`;
+
+            document.getElementById('locationInfo').innerHTML = loc;
+        }
+
+    </script>
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

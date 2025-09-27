@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+</head>
+
+<body>
+    <h2>JS Math Demo</h2>
+    <hr>
+    <div>
+        <label for="numberInput">Bạn chọn số mấy [1-6]: </label>
+        <input type="number" id="numberGame" value="1">
+    </div>
+    <p id="gameResult"></p>
+    <button id="playGame">Chơi</button>
+    <hr>
+
+
+    <div>
+        <label for="numberInput">Nhập số:</label>
+        <input type="number" id="numberInput" value="123.4567">
+    </div>
+    <div>
+        <p id="mathInfo"></p>
+    </div>
+    <script>
+        document.getElementById('numberInput').oninput = (ev) => {
+            let inputNumber = parseFloat(ev.target.value);
+
+            document.getElementById('mathInfo').innerHTML = `Số đã nhập: ${inputNumber}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Làm tròn: ${Math.round(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Làm tròn lên: ${Math.ceil(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Làm tròn xuống: ${Math.floor(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Giá trị tuyệt đối: ${Math.abs(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Căn bậc hai: ${Math.sqrt(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Potent: ${Math.pow(inputNumber, 2)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Logarit: ${Math.log(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Sin: ${Math.sin(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Cos: ${Math.cos(inputNumber)}`;
+
+            document.getElementById('mathInfo').innerHTML += `<br>Random (0-1): ${Math.random()}`;
+        }
+
+
+        document.getElementById('playGame').onclick = () => {
+            let userChoice = parseInt(document.getElementById('numberGame').value);
+
+            if (isNaN(userChoice) || userChoice < 1 || userChoice > 6) {
+                alert('Vui lòng chọn số từ 1 đến 6');
+                return;
+            }
+
+            let computerChoice = Math.floor(Math.random() * 6) + 1;
+
+            let resultText = `Bạn chọn: ${userChoice}, Máy chọn: ${computerChoice}. `;
+
+            if (userChoice === computerChoice) {
+                resultText += " => Bạn đã thắng!";
+            } else {
+                resultText += " => Bạn đã thua!";
+            }
+            document.getElementById('gameResult').innerText = resultText;
+        }
+    </script>
+</body>
+
+</html>

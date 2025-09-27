@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <h2>JS String Demo</h2>
+    <hr>
+    <div>
+        <label for="stringInput">Nhập chuỗi:</label>
+        <input type="text" id="stringInput" value="Hello World">
+    </div>
+    <div>
+        <p id="stringInfo"></p>
+    </div>
+    <script>
+        document.getElementById('stringInput').oninput = (ev) => {
+            let inputString = ev.target.value;
+
+            document.getElementById('stringInfo').innerHTML = `Chuỗi đã nhập: ${inputString}`;
+
+            document.getElementById('stringInfo').innerHTML += `<br>Độ dài chuỗi: ${inputString.length}`;
+
+            inputString = inputString.trim();
+            document.getElementById('stringInfo').innerHTML += `<br>Độ dài chuỗi sau khi xóa khoảng trắng: ${inputString.length}`;
+
+            document.getElementById('stringInfo').innerHTML += `<br>Chuỗi đảo ngược: ${inputString.split('').reverse().join('')}`;
+
+            document.getElementById('stringInfo').innerHTML += `<br>Viết thường: ${inputString.toLowerCase()}`;
+
+            document.getElementById('stringInfo').innerHTML += `<br>Viết hoa: ${inputString.toUpperCase()}`;
+
+
+        }
+    </script>
+</body>
+</html>
