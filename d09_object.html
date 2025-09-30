@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new-feature-2022</title>
+</head>
+
+<body>
+    <h2>The Class Demo</h2>
+    <hr>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</body>
+
+
+<script>
+    //xay dung lop mau, mo ta cau truc sinh vien
+    class Student {
+        id = 100;
+        name = "Nguyen Tuan";
+        active = true;
+
+        #password = 1234;
+
+        toString = () => {
+            return `${this.id}, ${this.name}, ${this.active}, ${this.#password}`;
+        }
+
+
+    }
+
+    // tao doi tuong sv1 , thuoc class Student
+    let sv1 = new Student();
+    let demo = document.getElementById("demo");
+    demo.innerHTML = sv1;
+
+
+    try {
+        let sv2 = new Student();
+        sv2.id = 102;
+        sv2.name = "Nhat Anh";
+        sv2.active = false;
+        // sv2.#password = "abc";  // syntax error !
+        let demo2 = document.getElementById("demo2");
+        demo2.innerHTML = sv2;
+    } catch (error) {
+        console.log(error.name);
+    }
+
+
+</script>
+
+</html>

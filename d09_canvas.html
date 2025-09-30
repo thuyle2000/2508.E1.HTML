@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Canvas Demo</title>
+    <style>
+        h2 {
+            color: #F00;
+            font-family: Script;
+        }
+
+        canvas {
+            border: #400000 medium groove;
+            border-radius: 15px;
+            margin: 10px;
+            background-color: #FFD;
+        }
+
+        .c1,
+        c2 {
+            float: left;
+            width: 100px;
+        }
+
+        .c2 {
+            float: none;
+            width: 100px;
+        }
+
+        form>div {
+            margin: 10px;
+            padding: 5px;
+            float: none;
+        }
+
+        #panel {
+            background-color: #6F6;
+            width: 500px;
+            border: #00F medium outset;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Drawing Canvas Demo</h2>
+    <canvas id="bangve" width="500" height="500">
+    </canvas>
+
+    <div id="panel">
+        <h3>Setting for Rectangle</h3>
+        <div>
+            <span class="c1">Height: </span>
+            <span class="c1"><input type="number" required id="txtH" name="txtH" min="10" max="200" value="100" />
+            </span>
+
+            <span class="c1">X: </span>
+            <span class="c2"><input type="number" required id="txtX" name="txtX" min="10" max="300" value="100" />
+            </span>
+
+        </div>
+
+        <div>
+            <span class="c1">Width: </span>
+            <span class="c1"><input type="number" required id="txtW" name="txtW" min="10" max="200" value="100" />
+            </span>
+            <span class="c1">Y: </span>
+            <span class="c2"><input type="number" required id="txtY" name="txtY" min="10" max="300" value="100" />
+            </span>
+        </div>
+
+        <div>
+            <span class="c1">Color: </span>
+            <span class="c2"><input type="color" required id="txtC" name="txtC" value="blue" /> </span>
+        </div>
+
+        <div>
+            <input type="button" value="Draw Rectangle" id="btnOK" />
+        </div>
+
+    </div>
+
+
+    <div id="panel">
+
+        <h3>Setting for Circle</h3>
+        <div>
+            <span class="c1">Radius: </span>
+            <span class="c2"><input type="number" required id="txtR" name="txtR" min="10" max="200" value="100" />
+            </span>
+        </div>
+        <div>
+            <span class="c1">X: </span>
+            <span class="c2"><input type="number" required id="txtXC" name="txtXC" min="10" max="300" value="100" />
+            </span>
+        </div>
+        <div>
+            <span class="c1">Y: </span>
+            <span class="c2"><input type="number" required id="txtYC" name="txtYC" min="10" max="300" value="100" />
+            </span>
+        </div>
+
+        <div>
+            <span class="c1">Color: </span>
+            <span class="c2"><input type="color" required id="txtCC" name="txtCC" value="blue" /> </span>
+        </div>
+
+        <div>
+            <input type="button" value="Draw Circle" id="btnCircle" />
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+
+    var bv = document.getElementById("bangve");
+    var context = bv.getContext("2d");
+
+    context.strokeStyle = 'red';
+    context.strokeLine = 3;
+    context.font = "2em Calibria";
+    context.strokeText("Demo Canvas", 50, 50);
+
+
+    document.getElementById("btnOK").onclick = function () {
+
+        //lay cac thong so hinh chu nhat
+        var h = document.getElementById("txtH").value;
+        var w = document.getElementById("txtW").value;
+        var x = document.getElementById("txtX").value;
+        var y = document.getElementById("txtY").value;
+        var color = document.getElementById("txtC").value;
+
+        //khoi tao
+        context.beginPath();
+
+        context.rect(x, y, w, h);
+        context.fillStyle = color;
+
+        context.globalAlpha = 1;
+
+        //to mau hinh chu nhat
+        context.fill();
+
+        //return false;
+
+    }
+
+
+    document.getElementById("btnCircle").onclick = function () {
+
+        var r = document.getElementById("txtR").value;
+        var x = document.getElementById("txtXC").value;
+        var y = document.getElementById("txtYC").value;
+        var start = 0;
+        var end = (360 / 180) * Math.PI;  // doi ra radian
+        var color = document.getElementById("txtCC").value;
+        var clockwise = false;
+
+        //khoi tao
+        context.beginPath();
+
+        context.arc(x, y, r, start, end, clockwise);
+        context.fillStyle = color;
+
+        context.globalAlpha = 0.5;
+        context.fill();
+
+        //return false;
+
+    }
+
+</script>

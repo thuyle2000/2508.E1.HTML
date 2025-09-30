@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-storage</title>
+</head>
+
+<body>
+    <h2>Local Storage Demo</h2>
+    <hr>
+
+    <div>
+        <form action="" method="get" id="formLogin">
+            <h3>sign-in</h3>
+            <div>
+                <label for="">username : </label>
+                <input type="text" name="user" id="user" value="thong" required>
+            </div>
+
+            <div>
+                <label for="">password: </label>
+                <input type="password" name="password" id="password" value="123">
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="btSave">Save Acount</button>
+                <button type="button" id="btReset">Reset Acount</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+<script src="js/d09.js"></script>
+<script>
+    document.getElementById("formLogin").onsubmit = function (ev) {
+        ev.preventDefault();
+
+        let tenDN = document.getElementById("user").value.trim();
+        let mkDN = document.getElementById("password").value.trim();
+
+        if (checkAccount(tenDN, mkDN)) {
+            alert("Welcome to Javascript !");
+        }
+        else {
+            alert("Login Failed ! Try again !");
+
+        }
+    }
+
+
+    document.getElementById("btSave").onclick = () => {
+        let tenDN = document.getElementById("user").value.trim();
+        let mkDN = document.getElementById("password").value.trim();
+
+        if (tenDN.length == 0) {
+            alert("Username cannot be blanked !");
+            document.getElementById("user").focus();
+            return;
+        }
+
+
+        if (mkDN.length == 0) {
+            alert("Password cannot be blanked !");
+            document.getElementById("password").focus();
+            return;
+        }
+
+        saveAccount(tenDN, mkDN);
+        alert("Save Account successfully !");
+    }
+</script>
